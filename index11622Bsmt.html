@@ -350,6 +350,10 @@
               <li class="list-group-item"><i class="bi bi-telephone-fill"> <a href="tel:+17804462729">1-780-446-2729</a></i></li>
               <li class="list-group-item"><i class="bi bi-envelope-fill"> <a href="mailto:mr.tony.manzo@gmail.com">mr.tony.manzo@gmail.com</a></i></li>
               <li class="list-group-item"><i class="bi bi-geo-alt-fill"> 11624 128 Street, Edmonton, Alberta, Canada</i></li>
+                <li class="list-group-item">
+            <button id="shareButton" class="btn btn-outline-primary btn-sm">Share this Page</button>
+            <input type="text" id="pageUrl" style="position: absolute; left: -9999px;" value="https://manzoenterprise.xyz/index11624Bsmt.html">
+          </li>
             </ul>
           </div>
         </div>
@@ -453,6 +457,14 @@
     scrollTop: $(this.hash).offset().top},1000,function(){window.location.hash=t;
     });
   })
+</script>
+<script>
+  document.getElementById('shareButton').addEventListener('click', function() {
+    const pageUrl = document.getElementById('pageUrl');
+    pageUrl.select();
+    document.execCommand('copy');
+    alert('Link copied to clipboard!');
+  });
 </script>
   </body>
 </html>
